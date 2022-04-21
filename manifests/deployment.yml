@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: emorypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: emorypipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: emorypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: emorypipelinesjavascriptdocker 
+          image: eastusacr773.azurecr.io/emorypipelinesjavascriptdocker
+          ports:
+          - containerPort: 80
